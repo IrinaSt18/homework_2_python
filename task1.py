@@ -1,11 +1,13 @@
 # Напишите программу, которая получает целое число и возвращает его шестнадцатеричное строковое представление. Функцию hex 
 # используйте для проверки своего результата.
-a = 320
+a = int(input("Введите целое число: "))
 result = ""
+DIVIDER = 16
+START = 2
 b = hex(a)
 while a > 0:
-    result = str(a%16) + result
-    a = a//16
+    result = str(a%DIVIDER) + result
+    a = a//DIVIDER
 print (b, result)
-if result == b[2:]:
+if result == b[START:]:
     print(True)
